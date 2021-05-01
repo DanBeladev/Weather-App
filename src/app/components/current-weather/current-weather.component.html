@@ -5,7 +5,6 @@
       <p class="location-name">{{weather.name}}</p>
     </div>
     <span class="temperature">{{weather.main.temp}}°</span>
-    {{isFavorite}}
     <img alt="" src="assets/follow.png" class="follow" *ngIf="!isFavorite" (click)="saveLocation()"/>
     <img alt="" src="assets/unfollow.png" class="follow" *ngIf="isFavorite" (click)="removeLocation()"/>
   </div>

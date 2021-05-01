@@ -1,18 +1,15 @@
   .current-container {
     display: flex;
-    width: 40%;
+    width: 30%;
     height: 200px;
     border-radius: 5px;
     box-shadow: 0 2px 2px 2px rgb(0 0 0 / 21%);
     padding: 15px 10px;
     .left-side {
       display: flex;
-      width: 50%;
       height: 100%;
       flex-direction: column;
-      align-content: center;
       justify-content: space-around;
-      align-items: stretch;
       .location {
         display: flex;
         align-items: flex-start;
@@ -22,8 +19,10 @@
           margin-right: 10px;
         }
         .location-name {
-          font-size: 18px;
+          font-size: 24px;
           font-weight: 400;
+          color: white;
+          font-weight: 500;
         }
       }
       .temperature {
