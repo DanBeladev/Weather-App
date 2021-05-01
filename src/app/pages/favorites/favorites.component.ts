@@ -1,5 +1,6 @@
 import { IfStmt } from '@angular/compiler';
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Key } from 'protractor';
 import { catchError } from 'rxjs/operators';
 import { CacheService } from 'src/app/services/cache.service';
@@ -19,14 +20,18 @@ export class FavoritesComponent implements OnInit, OnDestroy {
   constructor(private cache: CacheService,
      private weatherService: WeatherService,
      private spinner: SpinnerService,
-     private errorService: ErrorsService) { }
+     private errorService: ErrorsService,
+     private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.fetchData();
+    if(this.favorites.length === 0){
+      this.toastr.info("Save here the places you liked ", "Start adding favorite places from the home page :)")
+    }
 
-    this.interval = setInterval(()=>{
-      this.fetchData()
-    },15000)
+    // this.interval = setInterval(()=>{
+      // this.fetchData()
+    // },15000)
   }
 
   fetchData(): void {

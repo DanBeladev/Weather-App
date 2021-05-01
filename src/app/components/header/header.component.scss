@@ -13,16 +13,18 @@
   width: 60px;
 }
 .links {
-  width: 200px;
+  width: 280px;
   display: flex;
   justify-content: space-around;
   font-size: 18px;
   .link {
-    color: black;
+    color: #6d6dd6;
     font-weight: 400;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
+      font-size: 20px;
+      color: #4646d0;
     }
     &:active {
       text-decoration: underline;
@@ -32,3 +34,11 @@
   }
 }
 }
+
+
+@media only screen and (max-width: 600px) {
+  .links {
+    width: 200px;
+  }
+}
+

@@ -22,3 +22,17 @@
       font-weight: bold;
     }
   }
+  @media only screen and (max-width: 600px) {
+  .hour-container {
+    width: 20px;
+    height: 140px;
+    padding: 0;
+    margin: 0 31px;
+    .hour {
+    }
+    .hour-icon {
+    }
+    .temperature {
+    }
+  }
+}

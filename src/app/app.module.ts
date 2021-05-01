@@ -46,7 +46,10 @@ import { ToastrModule } from 'ngx-toastr';
     MatInputModule,
     HttpClientModule,
     MatIconModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot({
+      positionClass: 'toast-top-center',
+      preventDuplicates: true,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
