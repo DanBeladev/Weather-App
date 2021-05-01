@@ -22,7 +22,8 @@ export class CacheService {
   }
 
   isInFavorites(location_name: string): boolean {
-    return JSON.parse(localStorage.getItem('fav')).includes(location_name)
+    const items = JSON.parse(localStorage.getItem('fav'));
+    return items && items.includes(location_name)
   }
 
   removeLocation(location_name: string): void {
