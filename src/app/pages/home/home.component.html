@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <app-search></app-search>
+  <app-current-weather *ngIf="currentWeather"
+  [weather]="currentWeather"
+  [isFavorite]="isCurrentWeatherInFavorites"
+  (onSave)="onSaveLocaion()"
+  (onRemove)="onRemoveLocation()"
+  ></app-current-weather>
+  <app-hourly-weather [data]="hourlyWeatherData"></app-hourly-weather>
+</div>

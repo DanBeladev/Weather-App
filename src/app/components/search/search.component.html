@@ -1,0 +1,8 @@
+<!-- <form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Search Location</mat-label>
+    <input matInput placeholder="Ex. London" value="{{value}}" [(ngModel)] ="value" (change)="onSearch(e)">
+  </mat-form-field>
+</form> -->
+
+<input #searchBox id="search-box" (input)="onSearch(searchBox.value)" placeholder="Search Locations - Ex. London"/>

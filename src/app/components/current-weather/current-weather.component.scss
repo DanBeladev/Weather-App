@@ -1,0 +1,62 @@
+  .current-container {
+    display: flex;
+    width: 40%;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 2px rgb(0 0 0 / 21%);
+    padding: 15px 10px;
+    .left-side {
+      display: flex;
+      width: 50%;
+      height: 100%;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-around;
+      align-items: stretch;
+      .location {
+        display: flex;
+        align-items: flex-start;
+        width: 80%;
+        padding: 10px 5px;
+        mat-icon {
+          margin-right: 10px;
+        }
+        .location-name {
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+      .temperature {
+        font-size: 48px;
+        font-weight: bolder;
+        /* padding: 5px 40px; */
+        text-align: center;
+        width: 50%;
+        margin-top: 20px;
+      }
+      .follow {
+        width: 30px;
+        height: 30px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .description-container {
+      display: flex;
+      width: 70%;
+      flex-direction: column;
+      /* justify-content: center; */
+      padding: 10px 5px;
+      align-items: center;
+      .icon {
+        width: 100px;
+        height: 100px;
+      }
+      .text-description {
+        font-size: 21px;
+    color: black;
+    font-weight: 300;
+      }
+    }
+  }

@@ -1,0 +1,16 @@
+<div class="current-container">
+  <div class="left-side">
+    <div class="location">
+      <mat-icon>location_on</mat-icon>
+      <p class="location-name">{{weather.name}}</p>
+    </div>
+    <span class="temperature">{{weather.main.temp}}°</span>
+    {{isFavorite}}
+    <img alt="" src="assets/follow.png" class="follow" *ngIf="!isFavorite" (click)="saveLocation()"/>
+    <img alt="" src="assets/unfollow.png" class="follow" *ngIf="isFavorite" (click)="removeLocation()"/>
+  </div>
+  <div class="description-container">
+    <img alt="" src="{{weatherIcon}}" class="icon"/>
+    <span class="text-description">{{weather.weather[0].description}}</span>
+  </div>
+</div>
