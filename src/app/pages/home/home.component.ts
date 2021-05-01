@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     this.interval = setInterval(()=>{
       this.refreshData();
-    }, 10000);
+    }, 15000);
   }
 
   refreshData(): void {
