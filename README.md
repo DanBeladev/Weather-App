@@ -1,27 +1,44 @@
-# WeatherApp
+# Cyronix Home Assignment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+Dan Beladev - danbeladev@gmail.com - *Home Assignment - Cyronix*
 
-## Development server
+This app is written with Angular framwork using openweather api for simulating a weather indication around the world
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In order to run the application you first need to build the docker image from within the project directory:
+```
+docker build -t weather-app .
+```
 
-## Build
+Then, run the container (I used port 8080 but you can change it if needed):
+```
+docker run -p 8080:80 weather-app
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+You can access it from the browser via:
+`http://localhost:8080` 
 
-## Running unit tests
+ 
+ ### Without Docker
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ In order to run the application without Docker, directly on your host, you just need to run the following:
+```
+npm install
+npm start
+```
+The client should now run locally on port 4200.
+You can access it from the browser via: `http://localhost:4200`
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+### API
+I used 'https://openweathermap.org/api/' api to display the required data.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Extras
+- Themes will be replaced using css variables by clicking on the left side gif  in navbar.
+- I Dockerized the application.
+- I made the website responsive as possible with the time limits - also for mobile device.
+- I used a toastr for presenting messages and erros. 
