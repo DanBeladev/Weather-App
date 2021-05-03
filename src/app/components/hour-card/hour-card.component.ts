@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import * as moment from 'moment';
 
 @Component({
   selector: 'app-hour-card',
@@ -8,8 +7,7 @@ import * as moment from 'moment';
 })
 export class HourCardComponent implements OnInit {
 @Input() hourData
-hour: number;
-minutes: number;
+hour: string;
 temperature: number
   constructor() { }
 
@@ -17,9 +15,8 @@ temperature: number
 
   ngOnInit(): void {
     this.weatherIcon = `http://openweathermap.org/img/w/${this.hourData.weather[0].icon}.png`;
-    this.hour = moment(this.hourData.dt).hour();
-    // this.hour = this.hourData?.dt_text?.split(" ")[0];
-    this.minutes = new Date(this.hourData.dt).getMinutes();
+    const fullHour = this.hourData.dt_txt.split(' ')[1];
+    this.hour = `${fullHour.split(':')[0]}:${fullHour.split(':')[1]}`
     this.temperature = Math.round(this.hourData.main.temp);
   }
 

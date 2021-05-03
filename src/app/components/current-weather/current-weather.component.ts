@@ -12,12 +12,15 @@ export class CurrentWeatherComponent implements OnInit {
 @Input()isFavorite;
 @Output() onSave: EventEmitter<any> = new EventEmitter();
 @Output() onRemove: EventEmitter<any> = new EventEmitter();
-  constructor() { }
-  weatherIcon: string = '';
-  isSaved: boolean = false;
+
+constructor() { }
+weatherIcon: string = '';
+isSaved: boolean = false;
+roundedTemperature: number;
 
   ngOnInit(): void {
     this.weatherIcon = `http://openweathermap.org/img/w/${this.weather.weather[0].icon}.png`;
+    this.roundedTemperature = Math.round(this.weather.main.temp);
   }
 
   saveLocation(): void {

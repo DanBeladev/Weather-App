@@ -39,9 +39,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.getCurrentWeather();
 
-    // this.interval = setInterval(()=>{
+    this.interval = setInterval(()=>{
       this.refreshData();
-    // }, 15000);
+    }, 15000);
   }
 
   refreshData(): void {

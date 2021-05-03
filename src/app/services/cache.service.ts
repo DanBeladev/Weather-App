@@ -9,7 +9,6 @@ export class CacheService {
 
 
   saveLocation(locationCode: string): void {
-    debugger;
     if(!this.isInFavorites(locationCode)){
       const newFav = [...this.getList(), locationCode];
       this.saveList(newFav);
