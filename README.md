@@ -1,6 +1,3 @@
-# Cyronix Home Assignment
-
-Dan Beladev - danbeladev@gmail.com - *Home Assignment - Cyronix*
 
 This app is written with Angular framwork using openweather api for simulating a weather indication around the world
 
